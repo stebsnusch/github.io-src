@@ -1,6 +1,6 @@
 # Hello, World
 
-This is my personal information page. Here you can find information about my technical skills and learn about my professional experience.
+This is the source code of my personal information page. Here you can find information about my technical skills and learn about my professional experience.
 Click [here](https://stebsnusch.github.io) to access the demo.
 
 ## Built with
