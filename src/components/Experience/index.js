@@ -27,7 +27,7 @@ export const Experience = ({ setProgress, isVisible }) => {
       <FormControl margin="dense" variant="outlined" fullWidth>
         <InputLabel id="companySelect">Company</InputLabel>
         <Select
-          labelId="companySelect"
+          labelId="companySelector"
           id="companies"
           value={company}
           onChange={handleChange}
