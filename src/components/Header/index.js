@@ -1,30 +1,47 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
-import Avatar from '@material-ui/core/Avatar';
-import Chip from '@material-ui/core/Chip';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  List,
+  ListItem,
+  Link,
+} from '@material-ui/core';
 import { STYLES } from '../../utils/constants';
-import { CHARACTERISTICS } from './constants';
+import { HeaderDivider } from '../../utils/styledComponents';
+import { MENU_ITEMS } from './constants';
 
 export const Header = () => (
-  <Box py={8}>
-    <Grid direction="column" justify="center" spacing={2} alignItems="center" container>
-      <Grid item>
-        <Avatar alt="Stephany Nusch" src={require('../../assets/profile_pic.png')} style={STYLES.AVATAR} />
-      </Grid>
-      <Grid item>
-        <Typography variant="h1" align="center" style={STYLES.TITLE}>Stephany Nusch</Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" style={STYLES.SUBTITLE}>Software Engineer</Typography>
-        <Grid spacing={1} justify="center" container>
-          {CHARACTERISTICS.map((item, index) => (
-            <Grid key={index} item>
-              <Chip size="small" label={item} />
-            </Grid>
-          ))}
+  <Container>
+    <Box py={8} height="100%" style={STYLES.FULLHEIGHT} display="flex" alignItems="center">
+      <Grid container alignItems="center">
+        <Grid item xs={8}>
+          <Typography variant="h1" align="left">
+            <Box letterSpacing={15} fontWeight="600">
+              Stephany Nusch
+          </Box>
+          </Typography>
+          <Typography variant="subtitle1" align="left" color="textSecondary" style={STYLES.SUBTITLE}>
+            <Box letterSpacing={15}>
+              <strong>software engineer.</strong>
+            </Box>
+          </Typography>
+          <HeaderDivider />
+        </Grid>
+        <Grid alignItems="right" justify="right" alignContent="right" xs={4} item>
+          <List>
+            {MENU_ITEMS.map((link, index) => (
+              <ListItem key={index}>
+                <Link href={link.url} style={STYLES.FULLWIDTH}>
+                  <Typography align="right" style={STYLES.MENU}>{link.title}</Typography>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
         </Grid>
       </Grid>
-    </Grid>
-  </Box>
+    </Box>
+  </Container>
 );
 
