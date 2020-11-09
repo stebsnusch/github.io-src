@@ -1,9 +1,9 @@
 
 export const cardStyles = {
   root: {
-    maxWidth: '345px',
-  },
-  media: {
-    height: '200px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    paddingBottom: 0
   },
 };

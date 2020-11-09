@@ -4,26 +4,3 @@ export const CHARACTERISTICS = [
     'She/Her',
     'Front-End',
 ];
-
-export const MENU_ITEMS = [
-    {
-        title: 'About',
-        url: '',
-    },
-    {
-        title: 'Experience',
-        url: '',
-    },
-    {
-        title: 'Projects',
-        url: '',
-    },
-    {
-        title: 'Articles',
-        url: '',
-    },
-    {
-        title: 'Contact',
-        url: '',
-    }
-]

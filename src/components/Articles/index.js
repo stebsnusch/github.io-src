@@ -7,12 +7,13 @@ import {
   ListItemText,
   ListItemAvatar,
   Avatar,
-  Grid,
   Container,
+  Box
 } from '@material-ui/core';
 import StyledLink from './StyledLink';
 import DescriptionIcon from '@material-ui/icons/Description';
 import { STYLES } from '../../utils/constants';
+import { HeaderDivider } from '../../utils/styledComponents';
 import { ARTICLES } from './constants';
 
 export const Articles = ({ setProgress, isVisible }) => {
@@ -22,9 +23,18 @@ export const Articles = ({ setProgress, isVisible }) => {
 
   return (
     <Container style={STYLES.FULLHEIGHT}>
-      <Grid item>
-        <Typography variant="h3" style={STYLES.SECTION} gutterBottom>Articles</Typography>
-        <Typography>Read some of the stuff I wrote.</Typography>
+      <Box py={20}>
+        <Box letterSpacing={15}>
+          <Typography variant="h3" gutterBottom>
+            <strong>ARTICLES</strong>
+          </Typography>
+        </Box>
+        <HeaderDivider />
+        <Box mb={5}>
+          <Typography>
+            Read some of the stuff I wrote.
+        </Typography>
+        </Box>
         <List>
           {ARTICLES.map((text, index) => (
             <ListItem key={index}>
@@ -44,7 +54,7 @@ export const Articles = ({ setProgress, isVisible }) => {
             </ListItem>
           ))}
         </List>
-      </Grid>
+      </Box>
     </Container>
   );
 };
